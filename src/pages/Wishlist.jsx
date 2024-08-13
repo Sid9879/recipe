@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 
+
 const Wishlist = () => {
   const [wishlist, setWishlist] = useState(JSON.parse(localStorage.getItem("favitem")) || []);
 
@@ -11,6 +12,8 @@ const Wishlist = () => {
     localStorage.setItem("favitem", JSON.stringify(updatedWishlist));
   };
 
+  
+  
   return (
     <div>
       {wishlist.map((ele, index) => (
