@@ -12,13 +12,13 @@ const Wishlist = () => {
     // let index = arr.findIndex((ele)=>ele.sno===arr.sno)
     //   console.log(index)
 
-      const addItem = (item) => {
-        const existingItem = arr.find((ele) => ele.id === item.id);
-        if (!existingItem) {
-          arr.push(item);
-          localStorage.setItem("favitem", JSON.stringify(arr));
-        }
-      };
+      // const addItem = (item) => {
+      //   const existingItem = arr.find((ele) => ele.id === item.id);
+      //   if (!existingItem) {
+      //     arr.push(item);
+      //     localStorage.setItem("favitem", JSON.stringify(arr));
+      //   }
+      // };
 
   return (
     <div>

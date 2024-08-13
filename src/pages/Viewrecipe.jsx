@@ -12,9 +12,13 @@ const Viewrecipe = () => {
 const handlewishlist = () =>{
   console.log(data)
   // Add to wishlist logic here using local storage
-  arr.push(data)
-  console.log(arr)
-  localStorage.setItem("favitem", JSON.stringify(arr))
+  let find = arr.find((ele)=>ele.label===data.label);
+  if(!find){
+    arr.push(data)
+    localStorage.setItem("favitem", JSON.stringify(arr))
+  }
+  // arr.push(data)
+  // console.log(arr)
 }
   return (
     <div>

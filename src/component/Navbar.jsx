@@ -1,7 +1,10 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 
+
 const Navbar = () => {
+  let arr = JSON.parse(localStorage.getItem("favitem"))||[];
+
   return (
     <div>
      <nav className="navbar navbar-expand-lg navbar-light bg-light">
@@ -16,11 +19,11 @@ const Navbar = () => {
           <Link className="nav-link active" aria-current="page" to="/">Home</Link>
         </li>
         <li className="nav-item">
-          <Link className="nav-link active" aria-current="page" to="/wishlist"> Wishlist <i class="bi bi-heart "></i><sup>0</sup></Link>
+          <Link className="nav-link active" aria-current="page" to="/wishlist"> Wishlist <i class="bi bi-heart "></i><sup>{arr.length}</sup></Link>
         </li>
       </ul>
     </div>
-    <li><Link to =""><i class="bi bi-facebook"></i></Link></li>
+    <li><Link to ="https://www.facebook.com/"><i class="bi bi-facebook"></i></Link></li>
     <li><Link to =""><i class="bi bi-twitter"></i></Link></li>
     <li><Link to =""><i class="bi bi-instagram"></i></Link></li>
     <li><Link to =""><i class="bi bi-messenger"></i></Link></li>
