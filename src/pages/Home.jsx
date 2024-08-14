@@ -13,7 +13,7 @@ const Home = () => {
         // let data = await res.json();
         // console.log(data)
 
-        let res = await axios.get(`https://api.edamam.com/search?q=${search}&app_id=2fbd36e2&app_key=56ba86d4682e07c34d8bf532053a7777`)
+        let res = await axios.get(`https://api.edamam.com/search?q=${search}&app_id=${process.env.API_ID}&app_key=${process.env.API_KEY}`)
 
         console.log(res.data.hits)
         setitem(res.data.hits)
