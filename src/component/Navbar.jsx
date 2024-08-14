@@ -22,11 +22,15 @@ const Navbar = () => {
           <Link className="nav-link active" aria-current="page" to="/wishlist"> Wishlist <i class="bi bi-heart "></i><sup>{arr.length}</sup></Link>
         </li>
       </ul>
+
+      <ul className="navbar-nav ms-auto mb-2 mb-lg-0">
+      <li className="nav-item me-1"><Link to ="https://www.facebook.com/"><i class="bi bi-facebook"></i></Link></li>
+    <li className="nav-item me-1"><Link to =""><i class="bi bi-twitter"></i></Link></li>
+    <li className="nav-item me-1"><Link to ="https://www.instagram.com/dayite5536/?hl=en"><i class="bi bi-instagram"></i></Link></li>
+    <li className="nav-item me-1"><Link to =""><i class="bi bi-messenger"></i></Link></li>
+      </ul>
     </div>
-    <li><Link to ="https://www.facebook.com/"><i class="bi bi-facebook"></i></Link></li>
-    <li><Link to =""><i class="bi bi-twitter"></i></Link></li>
-    <li><Link to =""><i class="bi bi-instagram"></i></Link></li>
-    <li><Link to =""><i class="bi bi-messenger"></i></Link></li>
+    
   </div>
 </nav>
 
