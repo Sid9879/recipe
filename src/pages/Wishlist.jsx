@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 
-const Wishlist = () => {
+const Wishlist = (props) => {
   const [wishlist, setWishlist] = useState(JSON.parse(localStorage.getItem("favitem")) || []);
 
   const handleDelete = (index) => {
@@ -9,6 +9,7 @@ const Wishlist = () => {
     updatedWishlist.splice(index, 1);
     setWishlist(updatedWishlist);
     localStorage.setItem("favitem", JSON.stringify(updatedWishlist));
+    props.setclicked(!props.clicked)
   };
 
   

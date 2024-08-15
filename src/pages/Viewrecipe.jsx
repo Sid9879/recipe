@@ -1,7 +1,7 @@
 import React from 'react'
 import { Link, useLocation } from 'react-router-dom'
 
-const Viewrecipe = () => {
+const Viewrecipe = (props) => {
 
   let arr = JSON.parse(localStorage.getItem("favitem"))||[];
 
@@ -16,6 +16,7 @@ const handlewishlist = () =>{
   if(!find){
     arr.push(data)
     localStorage.setItem("favitem", JSON.stringify(arr))
+    props.setclicked(!props.clicked)
   }
   // arr.push(data)
   // console.log(arr)
